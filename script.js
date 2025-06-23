@@ -37,13 +37,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const removeBtn = document.createElement('button');
         removeBtn.textContent = 'Remove';
-        removeBtn.className = 'remove-btn';
+        // removeBtn.className = 'remove-btn';
+        removeBtn.classList.add('remove-btn');
 
         // Remove logic
         removeBtn.onclick = function () {
             taskList.removeChild(li);
             removeFromLocalStorage(taskText);
         };
+
 
         li.appendChild(removeBtn);
         taskList.appendChild(li);
